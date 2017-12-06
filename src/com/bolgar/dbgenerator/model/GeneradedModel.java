@@ -31,9 +31,7 @@ public class GeneradedModel {
         this.fields = fields;
     }
 
-    public void addField(String name, String type){
-        fields.add(new GeneratedField(name,type));
-    }
+
 
     @Override
     public String toString() {

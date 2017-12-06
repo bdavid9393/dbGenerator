@@ -1,11 +1,7 @@
-CREATE TABLE `staff` (
-	`username` VARCHAR(50) NOT NULL,
-	`password` VARCHAR(250) NOT NULL,
-	`full_name` VARCHAR(250) NOT NULL,
-	`email` VARCHAR(250) NOT NULL,
-	`enabled` TINYINT(4) NOT NULL DEFAULT '1',
-	`last_login` INT(11) NULL DEFAULT NULL,
-	`created_at` INT(11) NULL DEFAULT NULL,
-	`created_user_id` INT(10) UNSIGNED NULL DEFAULT NULL,
-	`updated_at` INT(11) NULL DEFAULT NULL,
-	`updated_user_id` INT(11) UNSIGNED NULL DEFAULT NULL,
+CREATE TABLE `work_parts` (
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`work_id` INT(10) UNSIGNED NOT NULL COMMENT 'munkaszámhoz kapcsolódó',
+	`part_name` VARCHAR(50) NOT NULL COMMENT 'alkatrész neve',
+	`montes_sign` VARCHAR(50) NOT NULL COMMENT 'egyedi alkatrész jelölés',
+	`created_at` INT(11) NOT NULL,
+	`created_user_id` INT(10) UNSIGNED NOT NULL,
