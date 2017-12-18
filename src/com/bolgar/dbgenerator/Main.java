@@ -85,10 +85,12 @@ public class Main {
     }
 
     public static String getFieldType(String input) {
-        if (input.contains("VARCHAR")) {
+        if (input.contains("VARCHAR") || input.contains("CHAR")) {
             return "String";
         } else if (input.contains("TINYINT") || input.contains("INT")) {
             return "Integer";
+        }else if(input.contains("FLOAT")){
+            return "Float";
         }
         ;
         return "hiba";
