@@ -1,7 +1,7 @@
-CREATE TABLE `worksheet_activities` (
-	`worksheet_activity_id` CHAR(36) NOT NULL,
-	`worksheet_id` CHAR(36) NOT NULL,
-	`activity_id` INT(10) UNSIGNED NOT NULL,
-	`start_at` INT(10) UNSIGNED NOT NULL,
-	`end_at` INT(10) UNSIGNED NULL DEFAULT NULL,
-	`sum_time` INT(10) UNSIGNED NULL DEFAULT NULL,
+CREATE TABLE `question` (
+	`question_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`worksheet_id` CHAR(36) NULL DEFAULT NULL,
+	`question_number` TINYINT(4) NULL DEFAULT NULL,
+	`answer` TINYINT(4) NULL DEFAULT NULL,
+	`comment` VARCHAR(500) NULL DEFAULT NULL,
+	`created_at` INT(10) UNSIGNED NULL DEFAULT NULL,

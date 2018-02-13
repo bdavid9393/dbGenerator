@@ -8,6 +8,7 @@ public class GeneratedField {
     String fieldType;
     String parentClass;
 
+
     public GeneratedField() {
 
     }

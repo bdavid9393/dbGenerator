@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class GeneradedModel {
     String className;
+    String primrayField;
     List<GeneratedField> fields= new ArrayList<>();
 
     public GeneradedModel(String className) {
@@ -31,7 +32,26 @@ public class GeneradedModel {
         this.fields = fields;
     }
 
+    public String getPrimrayField() {
+        return primrayField;
+    }
 
+    public void setPrimrayField(String primrayField) {
+        this.primrayField = primrayField;
+    }
+
+    public String getDbGetAll(){
+
+        return "   public static RealmResults<"+className+"> getAll() {\n" +
+                "        Realm realm = DataManager.getRealm();\n" +
+                "        if (!realm.isClosed()) {\n" +
+                "            return realm\n" +
+                "                    .where("+className+".class)\n" +
+                "                    .findAll();\n" +
+                "        }\n" +
+                "        return null;\n" +
+                "    }";
+    }
 
     @Override
     public String toString() {
