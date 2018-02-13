@@ -14,14 +14,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
 
-        PrintWriter writer = null;
-        String input = null;
-//        try {
-//            input = readFile("input.txt");
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-
         GeneradedModel generadedModel = null;
         BufferedReader br = null;
         try {
