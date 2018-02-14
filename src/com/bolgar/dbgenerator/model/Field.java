@@ -3,13 +3,15 @@ package com.bolgar.dbgenerator.model;
 /**
  * Created by david on 2017.12.06..
  */
-public class GeneratedField {
+public class Field {
     String fieldName;
     String fieldType;
     String parentClass;
+    boolean isIgnored;
+    boolean isPrimary;
 
 
-    public GeneratedField() {
+    public Field() {
 
     }
 
@@ -37,9 +39,25 @@ public class GeneratedField {
         this.parentClass = parentClass;
     }
 
+    public boolean isIgnored() {
+        return isIgnored;
+    }
+
+    public void setIgnored(boolean ignored) {
+        isIgnored = ignored;
+    }
+
+    public boolean isPrimary() {
+        return isPrimary;
+    }
+
+    public void setPrimary(boolean primary) {
+        isPrimary = primary;
+    }
+
     @Override
     public String toString() {
-        return "GeneratedField{" +
+        return "Field{" +
                 "fieldName='" + fieldName + '\'' +
                 ", fieldType='" + fieldType + '\'' +
                 '}';
